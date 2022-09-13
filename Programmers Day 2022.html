@@ -5,7 +5,7 @@
 function dayOfProgrammer(year){
 
       if(year<1700 || year >2700)
-      return;
+      return 'year out of range';
 
   if (year ==1918)
     return '26.9.1918'; 
@@ -25,13 +25,36 @@ console.log(' value of dayOfProgrammer(2520):',dayOfProgrammer(2520));
 console.log(' value of dayOfProgrammer(2717) : ', dayOfProgrammer(2717));
  // result : undefined
  
-
+ 
+ 
+ function printResult(){
+ 
+ var year=document.getElementById("year");
+ var resultlabel=document.getElementById("resultlabel");
+ 
+	 if(year && resultlabel)
+	 {
+		if( year.value&& parseInt(year.value) != NaN )
+			resultlabel.innerHTML= 'Result is :'+ dayOfProgrammer(parseInt(year.value));
+		 else 
+		   resultlabel.innerHTML= 'Year should be a number';
+		 
+	 
+	 }
+ }
+ 
 </script>
 
 
 <body>
-Press e12 to see consol logs
 
+Year: <input type="text" id="year" name="year"></input>
+
+ 
+<button onclick="printResult()">Calculate day Of Programmer</button>
+<br>
+ <label id="resultlabel" ></label>
+ 
 </body>
 
 </html>
