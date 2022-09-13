@@ -11,17 +11,17 @@ function dayOfProgrammer(year){
     return '26.9.1918'; 
 	
   if (year < 1918) //Julian calendar
-      return (year %4===0 ) ?'12.9.' +year : '13.9.' +year;
+      return (year %4===0 ) ?'12.09.' +year : '13.09.' +year;
   else  // Gregorian calendar
-    return (year %400===0  || (year%4==0 && year%100!=0)) ?'12.9.' +year : '13.9.' +year;
+    return (year %400===0  || (year%4==0 && year%100!=0)) ?'12.09.' +year : '13.09.' +year;
 }
 
 console.log(' value of dayOfProgrammer(1918):' , dayOfProgrammer(1918));
-  // result :'26.9.1918'
+  // result :'26.09.1918'
 console.log(' value of dayOfProgrammer(1717)',dayOfProgrammer(1717));
- // result : '13.9.1717'
+ // result : '13.09.1717'
 console.log(' value of dayOfProgrammer(2520):',dayOfProgrammer(2520));
- // result : '12.9.2520'
+ // result : '12.09.2520'
 console.log(' value of dayOfProgrammer(2717) : ', dayOfProgrammer(2717));
  // result : undefined
  
